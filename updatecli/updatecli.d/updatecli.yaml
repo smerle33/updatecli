@@ -40,6 +40,7 @@ pullrequests:
     targets:
       - bugReport
     spec:
+      automerge: true
       labels:
         - chore
         - skip-changelog

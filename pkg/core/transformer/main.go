@@ -109,6 +109,7 @@ func (t *Transformer) Apply(input string) (output string, err error) {
 			if _, ok := value.(string); ok {
 				f.Pattern = value.(string)
 				f.CaptureIndex = 0
+				fmt.Printf("WARNING: you should be using the find transformer -findLine")
 			} else {
 				err := mapstructure.Decode(value, &f)
 				if err != nil {
